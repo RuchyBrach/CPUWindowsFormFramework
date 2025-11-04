@@ -30,9 +30,12 @@ namespace CPUWindowsFormFramework
                     propertyname = "Text";
                     break;
                 case "dtp":
+                
                     propertyname = "Value";
                     break;
-
+                case "cbx":
+                    propertyname = "Checked";
+                    break;
             }
 
             if (propertyname != "" && columnname != "")
@@ -110,8 +113,7 @@ namespace CPUWindowsFormFramework
 
         public static void AddDeleteButtonToGrid(DataGridView grid, string deletecolname)
         {
-            grid.Columns.Add(new DataGridViewButtonColumn() { Text = "X", HeaderText = "Delete", Name = deletecolname, UseColumnTextForButtonValue = true });
-            
+            grid.Columns.Add(new DataGridViewButtonColumn() { Text = "X", HeaderText = "Delete", Name = deletecolname, UseColumnTextForButtonValue = true});
         }
         public static bool IsFormOpen(Type formtype, int pkvalue = 0)
         {
