@@ -108,12 +108,13 @@ namespace CPUWindowsFormFramework
             c.ValueMember = tablename + "Id";
             c.DataPropertyName = c.ValueMember;
             c.HeaderText = tablename;
+            c.Tag = "combocolumn";
             grid.Columns.Insert(0, c);
         }
 
         public static void AddDeleteButtonToGrid(DataGridView grid, string deletecolname)
         {
-            grid.Columns.Add(new DataGridViewButtonColumn() { Text = "X", HeaderText = "Delete", Name = deletecolname, UseColumnTextForButtonValue = true});
+            grid.Columns.Add(new DataGridViewButtonColumn() { Text = "X", HeaderText = "Delete", Name = deletecolname, UseColumnTextForButtonValue = true, Tag = "deletecol"});
         }
         public static bool IsFormOpen(Type formtype, int pkvalue = 0)
         {
