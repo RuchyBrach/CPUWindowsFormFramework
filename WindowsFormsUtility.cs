@@ -65,7 +65,7 @@ namespace CPUWindowsFormFramework
             grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             grid.RowHeadersWidth = 25;
             foreach(DataGridViewColumn col in grid.Columns){
-                if (col.Name.EndsWith("Id"))
+                if (col.Name.EndsWith("Id") || col.Name.Contains("Date") || col.Name.EndsWith("Pic") || col.Name.EndsWith("Active"))
                 {
                     col.Visible = false;
                 }
